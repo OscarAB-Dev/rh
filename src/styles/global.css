@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme{
+    --color-uesginda: #5d2b2b;
+    --color-uesyellow: #faa636;
+}
