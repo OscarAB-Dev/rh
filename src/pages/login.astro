@@ -1,0 +1,23 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import logoImage from "@/src/images/things.jpg";
+const pageTitle = "Login";
+---
+
+<Layout pageTitle={pageTitle}>
+  <main class="mx-auto flex items-center">
+    <div class="flex flex-col w-full">
+      <div class="flex flex-row items-center m-4">
+        <img
+          src={logoImage.src}
+          alt="Logo de la Universidad Estatal de Sonora"
+          class="h-36 w-auto mr-3"
+        />
+        <h1 class="text-uesginda font-bold text-4xl">
+          Universidad Estatal de Sonora
+        </h1>
+      </div>
+      <span class="h-2 bg-uesyellow"></span>
+    </div>
+  </main>
+</Layout>
