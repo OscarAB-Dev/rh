@@ -1,0 +1,22 @@
+---
+import logoImage from "@/images/things-Photoroom.png";
+---
+
+<header
+  class="flex flex-col w-full bg-gradient-to-r from-uesginda to-uespink h-30 p-2"
+>
+  <div class="flex flex-row items-center h-full">
+    <img
+      src={logoImage.src}
+      alt="Logo de la Universidad Estatal de Sonora"
+      class="h-full w-auto object-contain mx-6"
+    />
+    <!-- Mostrar esto si no esta logeado -->
+    <div class="flex flex-col justify-center ">
+      <h1 class="text-uesyellow font-bold text-4xl text-shadow-md/40 hidden md:block">UES</h1>
+      <span class="font-semibold text-white hidden md:block">Universidad Estatal de Sonora</span>
+      <span class="font-semibold text-white hidden md:block">La fuerza del saber estimulará mi espiritú</span>
+    </div>
+    <!-- Mostrar esto si está logeado TODO -->
+  </div>
+</header>
