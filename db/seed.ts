@@ -1,6 +1,14 @@
-import { db } from 'astro:db';
+import { db, Users } from 'astro:db';
+import { v4 as uuidv4 } from 'uuid';
+import bcrypt from 'bcrypt';
 
-// https://astro.build/db/seed
-export default async function seed() {
-	// TODO
+export default async function () {
+  const hashedPassword = await bcrypt.hash('admin123', 10); // Contraseña inicial: admin123
+  await db.insert(Users).values({
+    id: uuidv4(),
+    username: 'admin',
+    password: hashedPassword,
+    role: 'admin',
+    createdAt: new Date(),
+  });
 }
