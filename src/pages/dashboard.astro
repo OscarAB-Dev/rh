@@ -1,0 +1,18 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { getSession } from "auth-astro/server";
+
+const session = await getSession(Astro.request);
+if (!session) {
+  return Astro.redirect("/");
+}
+---
+
+---
+
+<Layout title="Inicio">
+  <h1>Bienvenido, {session.user?.name}</h1>
+  <form action="/api/auth/signout" method="POST">
+    <button type="submit">Cerrar Sesión</button>
+  </form>
+</Layout>
