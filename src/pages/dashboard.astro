@@ -8,8 +8,6 @@ if (!session) {
 }
 ---
 
----
-
 <Layout title="Inicio">
   <h1>Bienvenido, {session.user?.name}</h1>
   <form action="/api/auth/signout" method="POST">
